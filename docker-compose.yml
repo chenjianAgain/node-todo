@@ -1,0 +1,10 @@
+version:"2"
+
+mongodb:
+  image: bitnami/mongodb
+services:
+  express:
+  build: .
+  ports:
+    - "3000:8000"
+  restart: always
