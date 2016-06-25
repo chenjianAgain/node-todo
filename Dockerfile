@@ -16,7 +16,7 @@ FROM gcr.io/stacksmith-images/debian-buildpack:wheezy-r07
 MAINTAINER Bitnami <containers@bitnami.com>
 
 ENV STACKSMITH_STACK_ID="nrfoqo4" \
-    STACKSMITH_STACK_NAME="chenjianAgain/node-todo" \
+    :q!_STACK_NAME="chenjianAgain/node-todo" \
     STACKSMITH_STACK_PRIVATE="1"
 
 RUN bitnami-pkg install node-6.2.2-0 --checksum 6316e916fe82832aeee6137ea9b7b9d2328f156ed7f60205e2b1dbe83b6b564b
@@ -24,7 +24,7 @@ RUN bitnami-pkg install node-6.2.2-0 --checksum 6316e916fe82832aeee6137ea9b7b9d2
 ENV PATH=/opt/bitnami/node/bin:/opt/bitnami/python/bin:$PATH \
     NODE_PATH=/opt/bitnami/node/lib/node_modules
 
-## STACKSMITH-END: Modifications below this line will be unchanged when regenerating
+## STACKSMITH-END: Modifications b::elow this line will be unchanged when regenerating
 
 # ExpressJS template
 COPY . /app
@@ -34,4 +34,3 @@ RUN npm install
 
 EXPOSE 3000
 CMD ["node", "server.js"]
-
